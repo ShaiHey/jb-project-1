@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script defer src="assets/js/app.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/css/style.css">
+        <title>Project 1</title>
+    </head>
+    <body>
+        <div>
+            <header>My Task Board</header>
+
+            <div>
+                <form id="taskForm" onsubmit="addTask(event)">
+                    <label for="taskDescription">Task:</label>
+                    <textarea required id="taskDescription"></textarea>
+                    <br><br>
+                    <label for="dateTask">Date:</label>
+                    <input id="dateTask" type="date" required>
+                    <br><br>
+                    <label for="timeTask">Time:</label>
+                    <input id="timeTask" type="time" required>
+                    <br><br>
+                    <button>Add Task</button>
+                    <input type="reset" value="Clear Form">
+                </form>
+            </div>
+
+            <div id="tasksContainer">
+                
+            </div>
+        </div>
+    </body>
+</html>
