@@ -1,0 +1,98 @@
+@font-face {
+    font-family: "customFont";
+    src: url("../font/DashingDemander.ttf");
+}
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+body {
+    background-image: url("../images/tile.jpg");
+}
+
+header {
+    font-family: "customFont";
+    font-size: xx-large;
+    text-align: center;
+}
+
+form {
+    background-image: url("../images/formbg.jpg");
+    text-align: center;
+    margin: 20px 50px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+#tasksContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 20px;
+}
+
+.taskCard {
+    animation: fadeInAnimation ease 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    background-image: url("../images/notebg.png");
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin: 20px;
+    width: 200px;
+    height: 250px;
+    overflow: hidden;
+    position: relative;
+}
+
+.taskCard > div:nth-child(1) {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 10;
+    cursor: pointer;
+}
+
+.taskCard > div:nth-child(2) {
+    max-width: 180px;
+    max-height: 180px;
+    overflow-y: auto;
+    flex-grow: 1;
+    padding-left: 10px;
+    font-size: 14px;
+}
+
+.taskCard > div:nth-child(3),
+.taskCard > div:nth-child(4) {
+    font-weight: bold;
+    font-size: 12px;
+    text-align: left;
+    padding-left: 5px;
+}
+
+.taskCard > div:nth-child(4) {
+    padding-bottom: 5px;
+}
+
+.taskCard > div > span {
+    padding-right: 15px;
+    padding-top: 10px;
+    display: none;
+}
+
+.taskCard:hover > div > span {
+    display: block;
+}
+
+.taskCard > div > span:hover {
+    color: red;
+    cursor: pointer;
+}
